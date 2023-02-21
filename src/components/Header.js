@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import nba from "../../assets/nba-logo.png";
-import { data } from "../../helper/data";
+import nba from "../assets/nba-logo.png";
+import { data } from "../helper/data";
 
 const Header = () => {
   const [inputValue, setInputValue] = useState("");
@@ -29,42 +29,43 @@ const Header = () => {
           placeholder="Search Player..."
           aria-label="Search"
         />
+        <div className=" d-flex my-4 p-2">
+          <div className="box row justify-content-center gap-5">
+            {dataSon.map((item, index) => {
+              const { img, name, statistics } = item;
+              return (
+                <div key={index} className="card col-4">
+                  <div className="card-img">
+                    <img src={img} className="card-img-top py-2" alt="..." />
+                    <div className="card-body">
+                      <h5 className="card-title">{name}</h5>
+                    </div>
+                  </div>
 
-        <div className="card" style={{ width: "18rem" }}>
-          {dataSon.map((item, index) => {
-            const { img, name, statistics } = item;
-            return (
-              <div key={index}>
-                <div className="card-img">
-                  <img src={img} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
+                  <div className="card-text">
+                    <ul className="list-group ">
+                      <li className="list-group-item">
+                        <i className="fa-solid fa-basketball"> </i> Points:
+                        <span> {statistics[0].split(" ")[0]}</span>
+                      </li>
+                      <li className="list-group-item">
+                        <i className="fa-solid fa-basketball"> </i> Rebaunds:
+                        <span> {statistics[0].split(" ")[0]}</span>
+                      </li>
+                      <li className="list-group-item">
+                        <i className="fa-solid fa-basketball"> </i> Assist:
+                        <span> {statistics[0].split(" ")[0]}</span>
+                      </li>
+                      <li className="list-group-item">
+                        <i className="fa-solid fa-basketball"> </i> Assist:
+                        <span> {statistics[0].split(" ")[0]}</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-
-                <div className="card-text">
-                  <ul className="list-group ">
-                    <li className="list-group-item">
-                      <i className="fa-solid fa-basketball"> </i> Points:
-                      <span> {statistics[0].split(" ")[0]}</span>
-                    </li>
-                    <li className="list-group-item">
-                      <i className="fa-solid fa-basketball"> </i> Rebaunds:
-                      <span> {statistics[0].split(" ")[0]}</span>
-                    </li>
-                    <li className="list-group-item">
-                      <i className="fa-solid fa-basketball"> </i> Assist:
-                      <span> {statistics[0].split(" ")[0]}</span>
-                    </li>
-                    <li className="list-group-item">
-                      <i className="fa-solid fa-basketball"> </i> Assist:
-                      <span> {statistics[0].split(" ")[0]}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
