@@ -1,38 +1,40 @@
-.App {
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: darkorange !important;
+}
+
+/* header */
+.header {
   text-align: center;
+  padding: .6rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon-div {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .icon-div i {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.6rem;
+  color: rgb(215, 71, 19);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header input {
+  width: 400px;
+  padding: 0.3rem 2.4rem;
+  font-size: 18px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* card */
