@@ -52,15 +52,15 @@ const Header = () => {
                     </p>
                     <p>
                       <i className="fa-solid fa-basketball"> </i> Rebaunds:
-                      <span> {statistics[0].split(" ")[0]}</span>
+                      <span> {statistics[1].split(" ")[0]}</span>
                     </p>
                     <p>
                       <i className="fa-solid fa-basketball"> </i> Assist:
-                      <span> {statistics[0].split(" ")[0]}</span>
+                      <span> {statistics[2].split(" ")[0]}</span>
                     </p>
                     <p>
-                      <i className="fa-solid fa-basketball"> </i> Assist:
-                      <span> {statistics[0].split(" ")[0]}</span>
+                      <i className="fa-solid fa-basketball"> </i> All Star:
+                      <span> {statistics[3].split(" ")[0]}</span>
                     </p>
                   </ul>
                 </div>
