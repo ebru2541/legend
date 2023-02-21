@@ -62,14 +62,13 @@ body {
 
 .card-text ul {
   text-decoration: none;
- 
 }
-i{
+i {
   color: rgba(171, 66, 27, 0.905);
 }
 .card:hover .card-text {
   background-color: rgba(0, 0, 0, 0.192);
-   backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   transform: translateY(0);
- 
 }
+

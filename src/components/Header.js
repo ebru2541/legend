@@ -20,7 +20,7 @@ const Header = () => {
     <div>
       <div className="header">
         <img src={nba} width="150px" alt="" />
-        <h1 className="p-2">NBA Legends</h1>
+        <h1 className="p-2 h1">NBA Legends</h1>
         <input
           className="form-control me-2"
           type="search"
@@ -46,22 +46,12 @@ const Header = () => {
                 <div className="card-text">
                   <ul>
                     <h2>{name}</h2>
-                    <p>
-                      <i className="fa-solid fa-basketball"> </i> Points:
-                      <span> {statistics[0].split(" ")[0]}</span>
-                    </p>
-                    <p>
-                      <i className="fa-solid fa-basketball"> </i> Rebaunds:
-                      <span> {statistics[1].split(" ")[0]}</span>
-                    </p>
-                    <p>
-                      <i className="fa-solid fa-basketball"> </i> Assist:
-                      <span> {statistics[2].split(" ")[0]}</span>
-                    </p>
-                    <p>
-                      <i className="fa-solid fa-basketball"> </i> All Star:
-                      <span> {statistics[3].split(" ")[0]}</span>
-                    </p>
+                    {statistics.map((item) => (
+                      <p>
+                        <i className="fa-solid fa-basketball"> </i>
+                        <span> {item}</span>
+                      </p>
+                    ))}
                   </ul>
                 </div>
               </div>
