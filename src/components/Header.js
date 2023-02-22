@@ -4,17 +4,9 @@ import { data } from "../helper/data";
 
 const Header = () => {
   const [inputValue, setInputValue] = useState("");
-  let dataSon;
-
-  dataSon = inputValue
-    ? data
-        .filter(
-          (item) =>
-            item.name[0].toLocaleUpperCase() ===
-            inputValue[0].toLocaleUpperCase()
-        )
-        .map((itemm) => itemm)
-    : data;
+  const dataFilter = data.filter((item) =>
+    item.name.toLocaleLowerCase().startsWith(inputValue.toLocaleLowerCase())
+  );
 
   return (
     <div>
@@ -32,7 +24,7 @@ const Header = () => {
       </div>
       <div className=" d-flex my-4 p-2">
         <div className="box row justify-content-center gap-5">
-          {dataSon.map((item, index) => {
+          {dataFilter.map((item, index) => {
             const { img, name, statistics } = item;
             return (
               <div key={index} className="card col-4 mb-4">
