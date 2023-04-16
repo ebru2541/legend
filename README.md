@@ -30,6 +30,8 @@
 - JS
 
 - ReactJS
+```
+
 ![nba](https://github.com/ebru2541/nba-legend/blob/master/src/nba.gif)
 
 
