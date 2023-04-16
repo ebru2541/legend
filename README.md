@@ -30,6 +30,7 @@
 - JS
 
 - ReactJS
+![nba](https://github.com/ebru2541/nba-legend/blob/master/src/nba.gif)
 
 
-https://nba-legend.netlify.app/
+# https://nba-legend.netlify.app/
